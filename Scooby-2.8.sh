@@ -32,4 +32,6 @@ wget https://github.com/sfranzyshen/ifl/raw/master/SARndbox-2.8_IFL-addons.tar.g
 tar xfz SARndbox-2.8_IFL-addons.tar.gz
 bash fixup-sandbox.sh
 
+mkfifo ~/src/SARndbox-2.8/share/SARndbox-2.8/Control.fifo
+
 

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Big Timer</title>
+    <style>
+        /* CSS to display numbers as white on a black background */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: green;
+         }
+
+        #timer {
+            font-size: 30vw; /* Adjust the size as needed */
+        }
+
+        /* CSS for flashing text */
+        @keyframes flash {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .flashing {
+            animation: flash 1s infinite;
+        }
+
+        .red {
+            color: red;
+        }
+
+        #help {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: green;
+        }
+    </style>
+    <script>
+        let remainingTime = (15 * 60 * 1000); // Set the initial remaining time to 15 minutes (in milliseconds)
+        let timer_running = false; // Variable to control the timer
+        let help_visible = true; // Variable to control the visibility of the help message
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Start or stop the countdown timer
+        function toggleCountdown() {
+            if (timer_running) {
+                stopCountdown();
+            } else {
+                startCountdown();
+            }
+        }
+
+        // Stop the countdown timer
+        function stopCountdown() {
+            timer_running = false;
+        }
+
+        // Start the countdown timer
+        function startCountdown() {
+            timer_running = true;
+        }
+
+        // Reset the countdown timer
+        function resetCountdown() {
+            remainingTime = (15 * 60 * 1000); // Reset the remaining time to 15 minutes
+            timer_running = false;
+            updateCountdown();
+        }
+
+        // Add one minute to the remaining time
+        function addOneMinute() {
+            remainingTime += 60 * 1000; // Add one minute (60,000 milliseconds)
+            updateCountdown();
+        }
+
+        // Subtract one minute from the remaining time
+        function subtractOneMinute() {
+            remainingTime -= 60 * 1000; // Add one minute (60,000 milliseconds)
+            updateCountdown();
+        }
+
+        // Toggle the visibility of the help message
+        function toggleHelp() {
+            const helpElement = document.getElementById("help");
+            help_visible = !help_visible;
+            helpElement.style.display = help_visible ? "block" : "none";
+        }
+
+        function updateCountdown() {
+            if (timer_running) {
+                remainingTime -= 1000; // Subtract one second (1000 milliseconds) from remainingTime
+            }
+
+            if (remainingTime <= 0) {
+                stopCountdown();
+                document.getElementById("timer").innerHTML = "<span class='red flashing'>00:00</span>";
+            } else {
+                const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+                const displayTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+                if (minutes < 1 && timer_running) {
+                    document.getElementById("timer").innerHTML = "<span class='red flashing'>" + displayTime + "</span>";
+                } else if (minutes < 3) {
+                    document.getElementById("timer").innerHTML = "<span class='red'>" + displayTime + "</span>";
+                } else {
+                    document.getElementById("timer").innerHTML = displayTime;
+                }
+            }
+        }
+
+        // Add event listener for key presses
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 's') {
+                toggleCountdown();
+            } else if (event.key === 'r' && !timer_running) {
+                resetCountdown();
+            } else if (event.key === 'a') {
+                addOneMinute();
+            } else if (event.key === 'd') {
+                subtractOneMinute();
+            } else if (event.key === 'h') {
+                toggleHelp();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="timer"></div>
+    <div id="help" style="display: block;">
+        <strong>Keyboard Commands:</strong><br>
+        <strong>S:</strong> Start/Stop Timer<br>
+        <strong>R:</strong> Reset Timer<br>
+        <strong>A:</strong> Add One Minute<br>
+        <strong>D:</strong> Sub One Minute<br>
+        <strong>F11:</strong> Toggle Full-Screen Mode<br>
+        <strong>H:</strong> Hide/Show Help Message
+    </div>
+</body>
+</html>

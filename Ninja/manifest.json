@@ -2,7 +2,7 @@
   "name": "Ottodiy Ninja Control",
   "short_name": "Ninja Control",
   "description": "Control interface for Ottodiy Ninja robot.",
-  "start_url": "/ninja.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#0a0a1a",
   "theme_color": "#00f0ff",

@@ -1,0 +1,564 @@
+/* Apply Inter font and basic styling to the body */
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Default: Arrange children vertically (portrait) */
+    align-items: center;    /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    min-height: 100vh;      /* Full viewport height */
+    background-color: #0a0a1a; /* Very dark background for futuristic feel (Dark Theme) */
+    padding: 1rem;          /* Padding around the content */
+    overflow: hidden; /* Prevent scrolling */
+    transition: background-color 0.5s ease; /* Smooth theme transition */
+}
+
+/* Page Header Styles */
+.page-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a1a2e; /* Dark blue-gray, consistent theme */
+    box-shadow: 0 2px 10px rgba(0, 240, 255, 0.2);
+    margin-bottom: 20px; /* Space below header */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.page-header h1 {
+    font-size: 1.8rem;
+    color: #00f0ff; /* Vibrant electric blue/cyan */
+    margin: 0;
+}
+
+/* Container for theme and language controls */
+.header-controls {
+    display: flex;
+    gap: 15px; /* Space between the theme, language, and connectivity panels */
+    align-items: center;
+}
+
+/* Base styles for header control panels (Theme, Language, Connectivity) */
+.theme-switch-panel,
+.language-switch-panel,
+.connectivity-switch-panel {
+    display: flex;
+    background-color: #0f3460; /* Dark blue */
+    padding: 5px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    position: relative; /* For positioning dropdowns */
+}
+
+/* Base styles for header control buttons */
+.theme-switch-panel button,
+.language-switch-panel button,
+.connectivity-switch-panel button {
+    background: none; /* No background for the button itself */
+    border: none;
+    font-size: 1.5rem; /* Size of the icon - img dictates size */
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect for language and connectivity buttons */
+.language-switch-panel button:hover,
+.connectivity-switch-panel button:hover {
+    background-color: #164e8b; /* Brighter blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+/* Specific hover effect for the theme button in dark theme */
+.theme-switch-panel button#themeToggleBtn:hover {
+    background-color: #164e8b; /* Brighter blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+
+.theme-switch-panel button:active,
+.language-switch-panel button:active,
+.connectivity-switch-panel button:active {
+    background-color: #0b2545;
+    transform: scale(0.95);
+}
+
+/* Dropdown menu base styles */
+.language-dropdown,
+.connectivity-dropdown {
+    position: absolute;
+    top: 100%; /* Position below the toggle button */
+    right: 0; /* Align to the right of the toggle button */
+    background-color: #1a1a2e; /* Dark background */
+    border: 1px solid #00f0ff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 240, 255, 0.3);
+    padding: 10px;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    z-index: 1000; /* Ensure it's on top of other content */
+    min-width: 150px; /* Minimum width for dropdown */
+}
+
+.language-dropdown button,
+.connectivity-dropdown button {
+    background: none;
+    border: none;
+    color: #00f0ff; /* For text within dropdown buttons */
+    padding: 8px 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem; /* For text within dropdown buttons */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between emoji/icon and text */
+}
+
+.language-dropdown button:hover,
+.connectivity-dropdown button:hover {
+    background-color: #0f3460;
+    color: #ffffff;
+}
+
+.language-dropdown button.active-lang,
+.connectivity-dropdown button.active-conn {
+    background-color: #00f0ff;
+    color: #0a0a1a;
+    font-weight: bold;
+}
+
+/* Styles for all header icons (theme, language, connectivity main buttons and dropdown icons) */
+.header-icon,
+.connectivity-dropdown .conn-icon {
+    width: 20px; /* Set a fixed width for the icons */
+    height: 20px; /* Set a fixed height for the icons */
+    vertical-align: middle; /* Align icon with text */
+    /* Filter to color the SVG images electric blue for dark theme */
+    filter: invert(70%) sepia(100%) saturate(700%) hue-rotate(180deg) brightness(100%) contrast(100%);
+    transition: filter 0.5s ease; /* Smooth transition for theme change */
+}
+
+/* Specific margin for dropdown icons */
+.connectivity-dropdown .conn-icon {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+
+/* Light Theme styles - applied when body has 'light-theme' class */
+body.light-theme {
+    background-color: #e0e8f0; /* Light background */
+}
+
+body.light-theme .page-header {
+    background-color: #f0f5fa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .page-header h1 {
+    color: #1a1a2e; /* Dark text */
+}
+
+body.light-theme .theme-switch-panel,
+body.light-theme .language-switch-panel,
+body.light-theme .connectivity-switch-panel {
+    background-color: #a0aec0; /* Lighter panel background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .theme-switch-panel button,
+body.light-theme .language-switch-panel button,
+body.light-theme .connectivity-switch-panel button {
+    /* No 'color' property here as SVG filter controls color */
+}
+
+/* Light Theme hover effect for language and connectivity buttons */
+body.light-theme .language-switch-panel button:hover,
+body.light-theme .connectivity-switch-panel button:hover {
+    background-color: #cbd5e1; /* Lighter background on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Specific hover effect for the theme button in light theme */
+body.light-theme .theme-switch-panel button#themeToggleBtn:hover {
+    background-color: #cbd5e1; /* Lighter background on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+
+body.light-theme .theme-switch-panel button:active,
+body.light-theme .language-switch-panel button:active,
+body.light-theme .connectivity-switch-panel button:active {
+    background-color: #94a3b8;
+}
+
+/* Active state for the theme toggle button - now transparent */
+body.light-theme .theme-switch-panel button#themeToggleBtn {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* When in dark theme, the sun icon is shown and should be active - now transparent */
+body:not(.light-theme) .theme-switch-panel button#themeToggleBtn {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+body.light-theme .language-dropdown,
+body.light-theme .connectivity-dropdown {
+    background-color: #f0f5fa;
+    border: 1px solid #4299e1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .language-dropdown button,
+body.light-theme .connectivity-dropdown button {
+    color: #1a1a2e;
+}
+
+body.light-theme .language-dropdown button:hover,
+body.light-theme .connectivity-dropdown button:hover {
+    background-color: #cbd5e1;
+    color: #1a1a2e;
+}
+
+body.light-theme .language-dropdown button.active-lang,
+body.light-theme .connectivity-dropdown button.active-conn {
+    background-color: #4299e1;
+    color: white;
+}
+
+/* Light theme for all header icons */
+body.light-theme .header-icon,
+body.light-theme .connectivity-dropdown .conn-icon {
+    /* Filter to color the SVG images dark for light theme, matching the dark text color */
+    filter: invert(100%) brightness(0.5); /* Makes white SVGs dark grey */
+}
+
+/* Light Theme styles for main control panels */
+body.light-theme .control-panel-container,
+body.light-theme .mode-switch-panel,
+body.light-theme .action-button-panel {
+    background-color: #f0f5fa; /* Lighter background for panels */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+
+/* Light Theme styles for the inner button and joystick panels */
+body.light-theme .button-panel,
+body.light-theme .joystick-panel {
+    background-color: #f0f5fa; /* Match the lighter container background */
+}
+
+
+/* Light Theme styles for buttons within control panels */
+body.light-theme .button-panel button,
+body.light-theme .mode-switch-panel button,
+body.light-theme .action-button-panel button {
+    background-color: #cbd5e1; /* Lighter button background */
+    color: #1a1a2e; /* Darker text/symbols */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Lighter button shadow */
+}
+
+/* Light Theme hover effect for buttons within control panels */
+body.light-theme .button-panel button:hover,
+body.light-theme .mode-switch-panel button:hover,
+body.light-theme .action-button-panel button:hover {
+    background-color: #e2e8f0; /* Even lighter on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Lighter glow on hover */
+}
+
+/* Light Theme active effect for buttons within control panels */
+body.light-theme .button-panel button:active,
+body.light-theme .mode-switch-panel button:active,
+body.light-theme .action-button-panel button:active {
+    background-color: #94a3b8; /* Darker on active */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); /* Lighter inset shadow */
+}
+
+/* Light Theme active state for directional and toggle buttons */
+body.light-theme .button-panel button.active-button,
+body.light-theme .mode-switch-panel button.active-mode,
+body.light-theme .action-button-panel button.active-toggle {
+    background-color: #4299e1; /* Bright blue when active */
+    color: white; /* White text on bright blue */
+    box-shadow: 0 0 20px rgba(66, 153, 225, 0.7), 0 0 30px rgba(66, 153, 225, 0.5); /* Blue glow */
+    border: 2px solid #4299e1; /* Blue border */
+}
+
+/* Light Theme joystick base and handle */
+body.light-theme .joystick-base {
+    background-color: #cbd5e1; /* Lighter base */
+    border: 2px solid #4299e1; /* Blue border */
+    box-shadow: 0 0 15px rgba(66, 153, 225, 0.5); /* Blue glow */
+}
+
+body.light-theme .joystick-handle {
+    background-color: #4299e1; /* Blue handle */
+    box-shadow: 0 0 10px #4299e1, 0 0 20px #4299e1; /* Blue glow */
+}
+
+
+/* Media query for landscape orientation (e.g., tablets and larger phones) */
+@media (min-width: 768px) and (orientation: landscape) {
+    body {
+        flex-direction: row; /* Change to horizontal layout */
+        justify-content: center; /* Center items horizontally */
+        align-items: center;    /* Center items vertically */
+        padding: 1rem; /* Maintain padding */
+        gap: 20px; /* Add gap between panels for horizontal layout */
+    }
+
+    .page-header {
+        position: absolute; /* Take out of flow for horizontal layout */
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0.5rem 1rem; /* Smaller padding in landscape header */
+        margin-bottom: 0; /* No bottom margin */
+    }
+    .control-panel-container {
+        margin-top: 50px; /* Push down to clear header */
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+    .mode-switch-panel {
+        flex-direction: column; /* Stack mode buttons vertically */
+        margin-bottom: 0; /* Remove bottom margin */
+        padding: 10px 5px; /* Adjust padding for vertical stack */
+        height: fit-content; /* Adjust height */
+    }
+    .mode-switch-panel button {
+        margin: 10px 0; /* Increased margin for vertical stack */
+    }
+    .action-button-panel {
+        flex-direction: column; /* Stack action buttons vertically */
+        padding: 15px; /* Match control-panel-container padding */
+        width: 230px; /* Fixed width to match control-panel-container */
+        height: 230px; /* Fixed height to match control-panel-container */
+        justify-content: center; /* Center buttons vertically */
+        align-items: center; /* Center buttons horizontally */
+    }
+    .action-button-panel button {
+        margin: 12px 0; /* Increased margin for vertical stack */
+    }
+}
+
+
+/* Container for the control panels (button panel and joystick panel) */
+.control-panel-container {
+    width: 230px; /* Calculated width: 3*60px (buttons) + 2*10px (gaps) + 2*15px (padding) */
+    height: 230px; /* Calculated height: 3*60px (buttons) + 2*10px (gaps) + 2*15px (padding) */
+    position: relative; /* For absolute positioning of child panels */
+    margin-bottom: 20px; /* Space between control panels and switch (default/portrait) */
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 240, 255, 0.3); /* Electric blue glow shadow */
+    background-color: #1a1a2e; /* Dark blue-gray for the container background */
+    padding: 15px; /* Padding for the container itself */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Smooth theme transition */
+}
+
+/* Base styles for both button and joystick panels to ensure consistent appearance */
+.button-panel, .joystick-panel {
+    position: absolute; /* Position panels on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px; /* Match container padding */
+    box-sizing: border-box; /* Include padding in width/height */
+    border-radius: 1rem; /* Match container border-radius */
+    background-color: #1a1a2e; /* Dark blue-gray for the panel background */
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.5s ease; /* Smooth transition for showing/hiding and theme */
+}
+
+/* Styles for the button panel */
+.button-panel {
+    display: grid; /* Initial display for the button panel */
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+    gap: 10px; /* Original gap */
+    /* Added for centering the grid content within the panel */
+    justify-content: center;
+    align-content: center;
+    /* No background or shadow here, inherited from container */
+}
+
+/* Styles for individual buttons */
+.button-panel button {
+    background-color: #0f3460; /* Dark blue for buttons */
+    color: #00f0ff; /* Vibrant electric blue/cyan for symbols */
+    font-size: 1.8rem; /* Larger font size for symbols */
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem; /* Rounded corners for buttons */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease, border 0.3s ease; /* Smooth transitions for all properties */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Deeper button shadow */
+    position: relative; /* Needed for pseudo-elements for glow */
+    overflow: hidden; /* Ensures glow stays within button bounds */
+}
+
+/* Hover effect: Brighter background and a subtle glow */
+.button-panel button:hover {
+    background-color: #164e8b;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+}
+
+/* Active (click) effect: Deeper press and a quick scale */
+.button-panel button:active {
+    background-color: #0b2545;
+    transform: scale(0.95);
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.05s ease, transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+/* New active state for buttons - persistent glow and color change */
+.button-panel button.active-button {
+    background-color: #00f0ff;
+    color: #0a0a1a;
+    box-shadow: 0 0 25px #00f0ff, 0 0 40px #00f0ff, 0 0 60px #00f0ff;
+    transform: scale(1.05);
+    border: 2px solid #00f0ff;
+}
+
+/* Grid positioning for each button */
+.up-arrow { grid-column: 2; grid-row: 1; }
+.left-arrow { grid-column: 1; grid-row: 2; }
+.center-square { grid-column: 2; grid-row: 2; }
+.right-arrow { grid-column: 3; grid-row: 2; }
+.down-arrow { grid-column: 2; grid-row: 3; }
+
+/* Styles for the joystick panel */
+.joystick-panel {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.joystick-base {
+    width: 150px;
+    height: 150px;
+    background-color: #0f3460;
+    border-radius: 50%;
+    border: 2px solid #00f0ff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    transition: background-color 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
+}
+
+.joystick-handle {
+    width: 60px;
+    height: 60px;
+    background-color: #00f0ff;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    cursor: grab;
+    transition: transform 0.1s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styles for the walk/roll switch */
+.mode-switch-panel {
+    display: flex;
+    background-color: #1a1a2e;
+    padding: 10px;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 240, 255, 0.3);
+    margin-bottom: 20px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.mode-switch-panel button {
+    background-color: #0f3460;
+    color: #00f0ff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.mode-switch-panel button:hover {
+    background-color: #164e8b;
+    box-shadow: 0 0 15px #00f0ff;
+}
+
+.mode-switch-panel button.active-mode {
+    background-color: #00f0ff;
+    color: #0a0a1a;
+    box-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+    transform: scale(1.02);
+}
+
+/* Styles for the new action button panel (A and B buttons) */
+.action-button-panel {
+    display: flex;
+    background-color: #1a1a2e;
+    padding: 15px;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 240, 255, 0.3);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    width: 230px;
+    height: 230px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button-panel button {
+    background-color: #0f3460;
+    color: #00f0ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    margin: 8px ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.action-button-panel button:hover {
+    background-color: #164e8b;
+    transform: translateY(-1px);
+    box-shadow: 0 0 15px #00f0ff;
+}
+
+.action-button-panel button:active {
+    background-color: #0b2545;
+    transform: scale(0.98);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Active state for toggle buttons like "Avoid" and "Follow" */
+.action-button-panel button.active-toggle {
+    background-color: #00f0ff;
+    color: #0a0a1a;
+    box-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+    transform: scale(1.02);
+}

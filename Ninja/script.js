@@ -52,7 +52,11 @@ const translations = {
         "italian": "Italiano",
         "dutch": "Nederlands",
         "japanese": "日本語",
-        "chinese": "中文"
+        "chinese": "中文",
+        "swedish": "Swedish",
+        "portuguese": "Portuguese",
+        "russian": "Russian",
+        "polish": "Polish"
     },
     "es": {
         "pageTitle": "Ottodiy Ninja",
@@ -80,7 +84,11 @@ const translations = {
         "italian": "Italiano",
         "dutch": "Holandés",
         "japanese": "Japonés",
-        "chinese": "Chino"
+        "chinese": "Chino",
+        "swedish": "Sueco",
+        "portuguese": "Português",
+        "russian": "Ruso",
+        "polish": "Polaco"
     },
     "fr": {
         "pageTitle": "Ottodiy Ninja",
@@ -108,7 +116,11 @@ const translations = {
         "italian": "Italien",
         "dutch": "Néerlandais",
         "japanese": "Japonais",
-        "chinese": "Chinois"
+        "chinese": "Chinois",
+        "swedish": "Suédois",
+        "portuguese": "Portugais",
+        "russian": "Russe",
+        "polish": "Polonais"
     },
     "de": {
         "pageTitle": "Ottodiy Ninja",
@@ -136,7 +148,11 @@ const translations = {
         "italian": "Italienisch",
         "dutch": "Niederländisch",
         "japanese": "Japonisch",
-        "chinese": "Chinesisch"
+        "chinese": "Chinesisch",
+        "swedish": "Schwedisch",
+        "portuguese": "Portugiesisch",
+        "russian": "Русский",
+        "polish": "Polnisch"
     },
     "it": { // Italian translations
         "pageTitle": "Ottodiy Ninja",
@@ -164,7 +180,11 @@ const translations = {
         "italian": "Italiano",
         "dutch": "Olandese",
         "japanese": "Giapponese",
-        "chinese": "Cinese"
+        "chinese": "Cinese",
+        "swedish": "Svedese",
+        "portuguese": "Portoghese",
+        "russian": "Russo",
+        "polish": "Polacco"
     },
     "nl": { // Dutch translations
         "pageTitle": "Ottodiy Ninja",
@@ -192,7 +212,11 @@ const translations = {
         "italian": "Italiaans",
         "dutch": "Nederlands",
         "japanese": "Japans",
-        "chinese": "Chinees"
+        "chinese": "Chinees",
+        "swedish": "Zweeds",
+        "portuguese": "Portugees",
+        "russian": "Russisch",
+        "polish": "Pools"
     },
     "ja": { // Japanese translations
         "pageTitle": "Ottodiy ニンジャ",
@@ -219,8 +243,12 @@ const translations = {
         "german": "ドイツ語",
         "italian": "イタリア語",
         "dutch": "オランダ語",
-        "japanese": "日本語",
-        "chinese": "中国語"
+        "japanese": "Japans",
+        "chinese": "中国語",
+        "swedish": "スウェーデン語",
+        "portuguese": "ポルトガル語",
+        "russian": "Русский",
+        "polish": "ポーランド語"
     },
     "zh": { // Chinese translations (Simplified Chinese)
         "pageTitle": "Ottodiy 忍者",
@@ -248,7 +276,139 @@ const translations = {
         "italian": "意大利语",
         "dutch": "荷兰语",
         "japanese": "日语",
-        "chinese": "中文"
+        "chinese": "中文",
+        "swedish": "瑞典语",
+        "portuguese": "葡萄牙语",
+        "russian": "俄语",
+        "polish": "波兰语"
+    },
+    "sv": { // Swedish translations
+        "pageTitle": "Ottodiy Ninja",
+        "headerTitle": "Ninja Kontroll",
+        "upBtnTitle": "Framåt",
+        "leftBtnTitle": "Sväng Vänster",
+        "centerBtnTitle": "Stopp",
+        "rightBtnTitle": "Sväng Höger",
+        "downBtnTitle": "Bakåt",
+        "walkModeBtn": "Gå",
+        "rollModeBtn": "Rulla",
+        "avoidBtn": "Undvik",
+        "followBtn": "Följ",
+        "themeToggleBtnDark": "Växla till Ljust Läge",
+        "themeToggleBtnLight": "Växla till Mörkt Läge",
+        "languageToggleBtn": "Ändra språk",
+        "connectivityToggleBtn": "Ändra Anslutning",
+        "net": "NÄT",
+        "ble": "BLE",
+        "ser": "SERIELL",
+        "english": "Engelska",
+        "spanish": "Spanska",
+        "french": "Franska",
+        "german": "Tyska",
+        "italian": "Italienska",
+        "dutch": "Holländska",
+        "japanese": "Japanska",
+        "chinese": "Kinesiska",
+        "swedish": "Svenska",
+        "portuguese": "Portugisiska",
+        "russian": "Ryska",
+        "polish": "Polska"
+    },
+    "pt": { // Portuguese translations
+        "pageTitle": "Ottodiy Ninja",
+        "headerTitle": "Controle Ninja",
+        "upBtnTitle": "Para Frente",
+        "leftBtnTitle": "Virar à Esquerda",
+        "centerBtnTitle": "Parar",
+        "rightBtnTitle": "Virar à Direita",
+        "downBtnTitle": "Para Trás",
+        "walkModeBtn": "Andar",
+        "rollModeBtn": "Rolar",
+        "avoidBtn": "Evitar",
+        "followBtn": "Seguir",
+        "themeToggleBtnDark": "Mudar para Modo Claro",
+        "themeToggleBtnLight": "Mudar para Modo Escuro",
+        "languageToggleBtn": "Mudar idioma",
+        "connectivityToggleBtn": "Mudar Conectividade",
+        "net": "REDE",
+        "ble": "BLE",
+        "ser": "SERIAL",
+        "english": "Inglês",
+        "spanish": "Espanhol",
+        "french": "Francês",
+        "german": "Alemão",
+        "italian": "Italiano",
+        "dutch": "Holandês",
+        "japanese": "Japonês",
+        "chinese": "Chinês",
+        "swedish": "Sueco",
+        "portuguese": "Portugês",
+        "russian": "Russo",
+        "polish": "Polonês"
+    },
+    "ru": { // Russian translations
+        "pageTitle": "Ottodiy Ниндзя",
+        "headerTitle": "Управление Ниндзя",
+        "upBtnTitle": "Вперед",
+        "leftBtnTitle": "Повернуть Влево",
+        "centerBtnTitle": "Стоп",
+        "rightBtnTitle": "Повернуть Вправо",
+        "downBtnTitle": "Назад",
+        "walkModeBtn": "Идти",
+        "rollModeBtn": "Катиться",
+        "avoidBtn": "Избегать",
+        "followBtn": "Следовать",
+        "themeToggleBtnDark": "Переключить на Светлый Режим",
+        "themeToggleBtnLight": "Переключить на Темный Режим",
+        "languageToggleBtn": "Изменить язык",
+        "connectivityToggleBtn": "Изменить Подключение",
+        "net": "СЕТЬ",
+        "ble": "BLE",
+        "ser": "СЕРИЙНЫЙ",
+        "english": "Английский",
+        "spanish": "Испанский",
+        "french": "Французский",
+        "german": "Немецкий",
+        "italian": "Итальянский",
+        "dutch": "Голландский",
+        "japanese": "Японский",
+        "chinese": "Китайский",
+        "swedish": "Шведский",
+        "portuguese": "Португальский",
+        "russian": "Русский",
+        "polish": "Польский"
+    },
+    "pl": { // Polish translations
+        "pageTitle": "Ottodiy Ninja",
+        "headerTitle": "Sterowanie Ninja",
+        "upBtnTitle": "Do Przodu",
+        "leftBtnTitle": "Skręć W Lewo",
+        "centerBtnTitle": "Stop",
+        "rightBtnTitle": "Skręć W Prawo",
+        "downBtnTitle": "Do Tyłu",
+        "walkModeBtn": "Chodzić",
+        "rollModeBtn": "Toczyć",
+        "avoidBtn": "Unikaj",
+        "followBtn": "Śledź",
+        "themeToggleBtnDark": "Przełącz na Tryb Jasny",
+        "themeToggleBtnLight": "Przełącz na Tryb Ciemny",
+        "languageToggleBtn": "Zmień język",
+        "connectivityToggleBtn": "Zmień Łączność",
+        "net": "SIEĆ",
+        "ble": "BLE",
+        "ser": "SZEREGOWY",
+        "english": "Angielski",
+        "spanish": "Hiszpański",
+        "french": "Francuski",
+        "german": "Niemiecki",
+        "italian": "Włoski",
+        "dutch": "Holenderski",
+        "japanese": "Japoński",
+        "chinese": "Chiński",
+        "swedish": "Szwedzki",
+        "portuguese": "Portugalski",
+        "russian": "Rosyjski",
+        "polish": "Polski"
     }
 };
 
@@ -534,10 +694,12 @@ function setTheme(theme) {
         body.classList.remove('light-theme'); // Remove light theme class
         themeIcon.src = "sun.svg"; // Sun icon for dark theme
         themeIcon.alt = "Sun Icon";
+        localStorage.setItem('theme', 'dark'); // Save theme preference
     } else if (theme === 'light') {
         body.classList.add('light-theme'); // Add light theme class
         themeIcon.src = "moon.svg"; // Moon icon for light theme
         themeIcon.alt = "Moon Icon";
+        localStorage.setItem('theme', 'light'); // Save theme preference
     }
     // Update tooltip based on the current theme and language
     themeToggleBtn.title = body.classList.contains('light-theme') ?
@@ -584,6 +746,7 @@ function selectLanguage(event) {
 
     // Apply new language translations
     applyTranslations(selectedLang);
+    localStorage.setItem('language', selectedLang); // Save language preference
 
     // Hide the dropdown after selection
     languageDropdown.style.display = 'none';
@@ -623,6 +786,7 @@ function selectConnectivity(event) {
     event.currentTarget.classList.add('active-conn'); // Use currentTarget
 
     currentConnectivity = selectedConn; // Update global current connectivity
+    localStorage.setItem('connectivity', selectedConn); // Save connectivity preference
 
     // Hide the dropdown after selection
     connectivityDropdown.style.display = 'none';
@@ -654,31 +818,73 @@ document.addEventListener('click', (event) => {
 
 // Set initial language, theme, and connectivity on load
 document.addEventListener('DOMContentLoaded', () => {
-    applyTranslations(currentLanguage); // Apply default language on load
-    setTheme('dark'); // Default to dark theme, which will set the initial tooltip
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch((error) => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        });
+    }
 
-    // Set initial language icon
+    // Load and apply theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        setTheme('dark'); // Default to dark theme if no preference saved
+    }
+
+    // Load and apply language preference
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+        applyTranslations(savedLanguage);
+        // Also ensure the correct language button is active
+        const savedLangButton = document.querySelector(`.language-dropdown button[data-lang="${savedLanguage}"]`);
+        if (savedLangButton) {
+            languageButtons.forEach(btn => btn.classList.remove('active-lang'));
+            savedLangButton.classList.add('active-lang');
+        }
+    } else {
+        applyTranslations(currentLanguage); // Apply default language on load
+    }
+
+    // Set initial language icon (remains globe.svg)
     const languageIcon = languageToggleBtn.querySelector('.header-icon');
     if (languageIcon) {
         languageIcon.src = "globe.svg"; // Globe icon
         languageIcon.alt = "Language Icon";
     }
 
-    // Set initial active language (e.g., 'en' for English by default)
-    const defaultLangButton = document.querySelector('.language-dropdown button[data-lang="en"]');
-    if (defaultLangButton) {
-        defaultLangButton.classList.add('active-lang');
+    // Load and apply connectivity preference
+    const savedConnectivity = localStorage.getItem('connectivity');
+    if (savedConnectivity) {
+        // Find the button corresponding to the saved connectivity and simulate a click
+        const savedConnButton = document.querySelector(`.connectivity-dropdown button[data-conn="${savedConnectivity}"]`);
+        if (savedConnButton) {
+            // Remove active class from all connectivity buttons
+            connectivityButtons.forEach(btn => btn.classList.remove('active-conn'));
+            // Add active class to the selected connectivity button
+            savedConnButton.classList.add('active-conn');
+            currentConnectivity = savedConnectivity; // Update global current connectivity
+        }
+    } else {
+        // Set initial active connectivity (e.g., 'net' for Wi-Fi by default)
+        const defaultConnButton = document.querySelector('.connectivity-dropdown button[data-conn="net"]');
+        if (defaultConnButton) {
+            defaultConnButton.classList.add('active-conn');
+            currentConnectivity = 'net'; // Ensure global variable is set
+        }
     }
 
-    // Set initial connectivity icon
+    // Set initial connectivity icon (remains bars.svg)
     const connectivityIcon = connectivityToggleBtn.querySelector('.header-icon');
     if (connectivityIcon) {
-        connectivityIcon.src = "bars.svg"; // Changed from "bars.svg" to "globe.svg" for consistency with HTML
+        connectivityIcon.src = "bars.svg";
         connectivityIcon.alt = "Connectivity Icon";
-    }
-    // Set initial active connectivity (e.g., 'net' for Wi-Fi by default)
-    const defaultConnButton = document.querySelector('.connectivity-dropdown button[data-conn="net"]');
-    if (defaultConnButton) {
-        defaultConnButton.classList.add('active-conn');
     }
 });

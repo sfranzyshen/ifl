@@ -1,6 +1,6 @@
 const CACHE_NAME = 'ninja-control-v1';
 const urlsToCache = [
-  '/ninja.html',
+  '/index.html',
   '/style.css',
   '/script.js',
   '/service-worker.js',

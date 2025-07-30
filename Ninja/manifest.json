@@ -2,7 +2,7 @@
   "name": "Ottodiy Ninja Control",
   "short_name": "Ninja Control",
   "description": "Control interface for Ottodiy Ninja robot.",
-  "start_url": "/ifl/Ninja/index.html",
+  "start_url": "https://www.sfranzyshen.org/ifl/Ninja/index.html",
   "scope": "/ifl/Ninja/",
   "display": "standalone",
   "background_color": "#0a0a1a",

@@ -1,23 +1,23 @@
 const CACHE_NAME = 'ninja-control-v1';
 const urlsToCache = [
-  '/index.html',
-  '/style.css',
-  '/script.js',
-  '/service-worker.js',
-  '/Tone.min.js',
-  '/bars.svg',
-  '/bluetooth.svg',
-  '/favicon.png',
-  '/globe.svg',
-  '/moon.svg',
-  '/sun.svg',
-  '/usb.svg',
-  '/wifi.svg',
+  '/ifl/Ninja/index.html',
+  '/ifl/Ninja/style.css',
+  '/ifl/Ninja/script.js',
+  '/ifl/Ninja/service-worker.js',
+  '/ifl/Ninja/Tone.min.js',
+  '/ifl/Ninja/bars.svg',
+  '/ifl/Ninja/bluetooth.svg',
+  '/ifl/Ninja/favicon.png',
+  '/ifl/Ninja/globe.svg',
+  '/ifl/Ninja/moon.svg',
+  '/ifl/Ninja/sun.svg',
+  '/ifl/Ninja/usb.svg',
+  '/ifl/Ninja/wifi.svg',
   // Add paths to your icons here if you create them
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
-  '/icons/icon-maskable-192x192.png',
-  '/icons/icon-maskable-512x512.png'
+  '/ifl/Ninja/icons/icon-192x192.png',
+  '/ifl/Ninja/icons/icon-512x512.png',
+  '/ifl/Ninja/icons/icon-maskable-192x192.png',
+  '/ifl/Ninja/icons/icon-maskable-512x512.png'
 ];
 
 self.addEventListener('install', (event) => {

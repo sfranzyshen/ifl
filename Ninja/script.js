@@ -27,6 +27,7 @@ function playClickSound() {
 // --- Translation Data ---
 const translations = {
     "en": {
+        "nativeName": "English",
         "pageTitle": "Ottodiy Ninja",
         "headerTitle": "Ninja Control",
         "upBtnTitle": "Forward",
@@ -44,21 +45,10 @@ const translations = {
         "connectivityToggleBtn": "Change Connectivity",
         "net": "NET",
         "ble": "BLE",
-        "ser": "SER",
-        "english": "English",
-        "spanish": "Español",
-        "french": "Français",
-        "german": "Deutsch",
-        "italian": "Italiano",
-        "dutch": "Nederlands",
-        "japanese": "日本語",
-        "chinese": "中文",
-        "swedish": "Swedish",
-        "portuguese": "Portuguese",
-        "russian": "Russian",
-        "polish": "Polish"
+        "ser": "SER"
     },
     "es": {
+        "nativeName": "Español",
         "pageTitle": "Ottodiy Ninja",
         "headerTitle": "Control Ninja",
         "upBtnTitle": "Adelante",
@@ -76,21 +66,10 @@ const translations = {
         "connectivityToggleBtn": "Cambiar Conectividad",
         "net": "RED",
         "ble": "BLE",
-        "ser": "SER",
-        "english": "Inglés",
-        "spanish": "Español",
-        "french": "Francés",
-        "german": "Alemán",
-        "italian": "Italiano",
-        "dutch": "Holandés",
-        "japanese": "Japonés",
-        "chinese": "Chino",
-        "swedish": "Sueco",
-        "portuguese": "Português",
-        "russian": "Ruso",
-        "polish": "Polaco"
+        "ser": "SER"
     },
     "fr": {
+        "nativeName": "Français",
         "pageTitle": "Ottodiy Ninja",
         "headerTitle": "Contrôle Ninja",
         "upBtnTitle": "Avancer",
@@ -108,21 +87,10 @@ const translations = {
         "connectivityToggleBtn": "Changer de Connectivité",
         "net": "RÉSEAU",
         "ble": "BLE",
-        "ser": "SÉRIE",
-        "english": "Anglais",
-        "spanish": "Español",
-        "french": "Français",
-        "german": "Allemand",
-        "italian": "Italien",
-        "dutch": "Néerlandais",
-        "japanese": "Japonais",
-        "chinese": "Chinois",
-        "swedish": "Suédois",
-        "portuguese": "Portugais",
-        "russian": "Russe",
-        "polish": "Polonais"
+        "ser": "SÉRIE"
     },
     "de": {
+        "nativeName": "Deutsch",
         "pageTitle": "Ottodiy Ninja",
         "headerTitle": "Ninja-Steuerung",
         "upBtnTitle": "Vorwärts",
@@ -140,21 +108,10 @@ const translations = {
         "connectivityToggleBtn": "Konnektivität ändern",
         "net": "NETZ",
         "ble": "BLE",
-        "ser": "SERIELL",
-        "english": "Englisch",
-        "spanish": "Spanisch",
-        "french": "Französisch",
-        "german": "Deutsch",
-        "italian": "Italienisch",
-        "dutch": "Niederländisch",
-        "japanese": "Japonisch",
-        "chinese": "Chinesisch",
-        "swedish": "Schwedisch",
-        "portuguese": "Portugiesisch",
-        "russian": "Русский",
-        "polish": "Polnisch"
+        "ser": "SERIELL"
     },
     "it": { // Italian translations
+        "nativeName": "Italiano",
         "pageTitle": "Ottodiy Ninja",
         "headerTitle": "Controllo Ninja",
         "upBtnTitle": "Avanti",
@@ -172,21 +129,10 @@ const translations = {
         "connectivityToggleBtn": "Cambia Connettività",
         "net": "RETE",
         "ble": "BLE",
-        "ser": "SERIALE",
-        "english": "English",
-        "spanish": "Español",
-        "french": "Français",
-        "german": "Deutsch",
-        "italian": "Italiano",
-        "dutch": "Olandese",
-        "japanese": "Giapponese",
-        "chinese": "Cinese",
-        "swedish": "Svedese",
-        "portuguese": "Portoghese",
-        "russian": "Russo",
-        "polish": "Polacco"
+        "ser": "SERIALE"
     },
     "nl": { // Dutch translations
+        "nativeName": "Nederlands",
         "pageTitle": "Ottodiy Ninja",
         "headerTitle": "Ninja Besturing",
         "upBtnTitle": "Vooruit",
@@ -204,21 +150,10 @@ const translations = {
         "connectivityToggleBtn": "Connectiviteit wijzigen",
         "net": "NET",
         "ble": "BLE",
-        "ser": "SERIEEL",
-        "english": "English",
-        "spanish": "Spaans",
-        "french": "Frans",
-        "german": "Duits",
-        "italian": "Italiaans",
-        "dutch": "Nederlands",
-        "japanese": "Japans",
-        "chinese": "Chinees",
-        "swedish": "Zweeds",
-        "portuguese": "Portugees",
-        "russian": "Russisch",
-        "polish": "Pools"
+        "ser": "SERIEEL"
     },
     "ja": { // Japanese translations
+        "nativeName": "日本語",
         "pageTitle": "Ottodiy ニンジャ",
         "headerTitle": "ニンジャ制御",
         "upBtnTitle": "前進",
@@ -236,21 +171,10 @@ const translations = {
         "connectivityToggleBtn": "接続を変更",
         "net": "ネット",
         "ble": "BLE",
-        "ser": "シリアル",
-        "english": "English",
-        "spanish": "スペイン語",
-        "french": "フランス語",
-        "german": "ドイツ語",
-        "italian": "イタリア語",
-        "dutch": "オランダ語",
-        "japanese": "Japans",
-        "chinese": "中国語",
-        "swedish": "スウェーデン語",
-        "portuguese": "ポルトガル語",
-        "russian": "Русский",
-        "polish": "ポーランド語"
+        "ser": "シリアル"
     },
     "zh": { // Chinese translations (Simplified Chinese)
+        "nativeName": "中文",
         "pageTitle": "Ottodiy 忍者",
         "headerTitle": "忍者控制",
         "upBtnTitle": "前进",
@@ -268,21 +192,10 @@ const translations = {
         "connectivityToggleBtn": "更改连接",
         "net": "网络",
         "ble": "蓝牙",
-        "ser": "串口",
-        "english": "English",
-        "spanish": "西班牙语",
-        "french": "法语",
-        "german": "德语",
-        "italian": "意大利语",
-        "dutch": "荷兰语",
-        "japanese": "日语",
-        "chinese": "中文",
-        "swedish": "瑞典语",
-        "portuguese": "葡萄牙语",
-        "russian": "俄语",
-        "polish": "波兰语"
+        "ser": "串口"
     },
     "sv": { // Swedish translations
+        "nativeName": "Svenska",
         "pageTitle": "Ottodiy Ninja",
         "headerTitle": "Ninja Kontroll",
         "upBtnTitle": "Framåt",
@@ -300,21 +213,10 @@ const translations = {
         "connectivityToggleBtn": "Ändra Anslutning",
         "net": "NÄT",
         "ble": "BLE",
-        "ser": "SERIELL",
-        "english": "Engelska",
-        "spanish": "Spanska",
-        "french": "Franska",
-        "german": "Tyska",
-        "italian": "Italienska",
-        "dutch": "Holländska",
-        "japanese": "Japanska",
-        "chinese": "Kinesiska",
-        "swedish": "Svenska",
-        "portuguese": "Portugisiska",
-        "russian": "Ryska",
-        "polish": "Polska"
+        "ser": "SERIELL"
     },
     "pt": { // Portuguese translations
+        "nativeName": "Português",
         "pageTitle": "Ottodiy Ninja",
         "headerTitle": "Controle Ninja",
         "upBtnTitle": "Para Frente",
@@ -332,21 +234,10 @@ const translations = {
         "connectivityToggleBtn": "Mudar Conectividade",
         "net": "REDE",
         "ble": "BLE",
-        "ser": "SERIAL",
-        "english": "Inglês",
-        "spanish": "Espanhol",
-        "french": "Francês",
-        "german": "Alemão",
-        "italian": "Italiano",
-        "dutch": "Holandês",
-        "japanese": "Japonês",
-        "chinese": "Chinês",
-        "swedish": "Sueco",
-        "portuguese": "Portugês",
-        "russian": "Russo",
-        "polish": "Polonês"
+        "ser": "SERIAL"
     },
     "ru": { // Russian translations
+        "nativeName": "Русский",
         "pageTitle": "Ottodiy Ниндзя",
         "headerTitle": "Управление Ниндзя",
         "upBtnTitle": "Вперед",
@@ -364,21 +255,10 @@ const translations = {
         "connectivityToggleBtn": "Изменить Подключение",
         "net": "СЕТЬ",
         "ble": "BLE",
-        "ser": "СЕРИЙНЫЙ",
-        "english": "Английский",
-        "spanish": "Испанский",
-        "french": "Французский",
-        "german": "Немецкий",
-        "italian": "Итальянский",
-        "dutch": "Голландский",
-        "japanese": "Японский",
-        "chinese": "Китайский",
-        "swedish": "Шведский",
-        "portuguese": "Португальский",
-        "russian": "Русский",
-        "polish": "Польский"
+        "ser": "СЕРИЙНЫЙ"
     },
     "pl": { // Polish translations
+        "nativeName": "Polski",
         "pageTitle": "Ottodiy Ninja",
         "headerTitle": "Sterowanie Ninja",
         "upBtnTitle": "Do Przodu",
@@ -396,19 +276,7 @@ const translations = {
         "connectivityToggleBtn": "Zmień Łączność",
         "net": "SIEĆ",
         "ble": "BLE",
-        "ser": "SZEREGOWY",
-        "english": "Angielski",
-        "spanish": "Hiszpański",
-        "french": "Francuski",
-        "german": "Niemiecki",
-        "italian": "Włoski",
-        "dutch": "Holenderski",
-        "japanese": "Japoński",
-        "chinese": "Chiński",
-        "swedish": "Szwedzki",
-        "portuguese": "Portugalski",
-        "russian": "Rosyjski",
-        "polish": "Polski"
+        "ser": "SZEREGOWY"
     }
 };
 
@@ -433,10 +301,10 @@ function applyTranslations(langCode) {
             }
             // For other elements, update textContent or specific child's textContent
             else if (element.tagName === 'BUTTON' || element.tagName === 'H1' || element.tagName === 'TITLE') {
-                // For language selection buttons
+                // For language selection buttons in the dropdown, their text is now set statically on DOMContentLoaded
+                // We skip them here to prevent them from being translated
                 if (element.dataset.lang) {
-                    const emoji = element.textContent.match(/(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)/gu);
-                    element.textContent = (emoji ? emoji[0] + ' ' : '') + translations[element.dataset.lang][key];
+                    // Do nothing here, text is set statically
                 }
                 // For connectivity buttons (now with <img> and <span>)
                 else if (element.dataset.conn) {
@@ -838,6 +706,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         setTheme('dark'); // Default to dark theme if no preference saved
     }
+
+    // --- Initialize language dropdown buttons with native names ---
+    languageButtons.forEach(button => {
+        const langCode = button.dataset.lang;
+        if (translations[langCode] && translations[langCode].nativeName) {
+            button.textContent = translations[langCode].nativeName;
+        }
+    });
 
     // Load and apply language preference
     const savedLanguage = localStorage.getItem('language');

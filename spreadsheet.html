@@ -169,7 +169,7 @@
                 method: 'POST',
                 // The header is important for the Apps Script to know it's receiving JSON
                 headers: {
-                    'Content-Type': 'application/json',
+					'Content-Type': 'text/plain;charset=utf-8', 
                 },
                 // The body contains the data for the doPost(e) function
                 body: JSON.stringify({ row: rowNumber, status: newStatus }),
